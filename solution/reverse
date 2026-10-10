@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+lines=()
+while IFS= read -r line; do
+    lines+=("$line")
+done
+
+total_lines=${#lines[@]}
+
+for ((i=total_lines-1; i>=0; i--)); do
+    echo "${lines[i]}"
+done
